@@ -9,10 +9,6 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-        brightness: Brightness.dark,
-      ),
     );
   }
 }

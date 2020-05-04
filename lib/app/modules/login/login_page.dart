@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:project_gobarber/app/modules/login/widgets/my_logo.dart';
 import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {
@@ -16,11 +17,12 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Column(
-        children: <Widget>[],
+      backgroundColor: Color.fromARGB(255, 49, 46, 57),
+      body: Stack(
+        alignment: Alignment.topCenter,
+        children: <Widget>[
+          MyLogo(),
+        ],
       ),
     );
   }
