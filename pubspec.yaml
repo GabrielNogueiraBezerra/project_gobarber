@@ -21,6 +21,7 @@ dependencies:
   flutter_mobx: ^1.1.0
   mobx: ^1.1.1
   flutter_modular: ^1.1.2
+  flutter_staggered_animations: ^0.1.2
   flutter:
     sdk: flutter
 
@@ -64,11 +65,16 @@ flutter:
     - family: YoungHeart
       fonts:
         - asset: assets/fonts/young_heart/Young-Heart.ttf
-  #         style: italic 
     - family: Roboto
       fonts:
         - asset: assets/fonts/roboto_slab/RobotoSlab-Medium.ttf
           weight: 500
+    - family: FenomenSlab
+      fonts:
+        - asset: assets/fonts/fenomen_slab/Fenomen-Slab-CN-Regular.otf
+    - family: ShadonSlab
+      fonts:
+        - asset: assets/fonts/shandon-slab/ShandonSlab-Medium.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
