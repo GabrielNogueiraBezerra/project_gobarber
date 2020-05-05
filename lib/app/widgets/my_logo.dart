@@ -4,7 +4,7 @@ class MyLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(80),
+      padding: const EdgeInsets.only(left: 80, right: 80),
       child: Container(
         height: 200,
         width: double.infinity,
