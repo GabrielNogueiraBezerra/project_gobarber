@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:project_gobarber/app/modules/login/login_controller.dart';
 
-class MyForm extends StatelessWidget {
+class MyForm extends StatefulWidget {
+  @override
+  _MyFormState createState() => _MyFormState();
+}
+
+class _MyFormState extends State<MyForm> {
+  LoginController controller = Modular.get<LoginController>();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -83,32 +93,34 @@ class MyForm extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Container(
-              height: 50,
-              width: double.infinity,
-              child: RaisedButton(
-                color: Color.fromARGB(255, 255, 144, 0),
-                highlightColor: Colors.transparent,
-                elevation: 0,
-                disabledElevation: 0,
-                focusElevation: 0,
-                highlightElevation: 0,
-                hoverElevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
-                    color: Color.fromARGB(255, 255, 144, 0),
+            Observer(builder: (context) {
+              return Container(
+                height: 50,
+                width: double.infinity,
+                child: RaisedButton(
+                  color: Color.fromARGB(255, 255, 144, 0),
+                  highlightColor: Colors.transparent,
+                  elevation: 0,
+                  disabledElevation: 0,
+                  focusElevation: 0,
+                  highlightElevation: 0,
+                  hoverElevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    side: BorderSide(
+                      color: Color.fromARGB(255, 255, 144, 0),
+                    ),
                   ),
-                ),
-                child: Text(
-                  'Entrar',
-                  style: TextStyle(
-                    fontSize: 15,
+                  child: Text(
+                    'Entrar',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
                   ),
+                  onPressed: controller.login ? () {} : controller.onTapLogin,
                 ),
-                onPressed: () {},
-              ),
-            ),
+              );
+            }),
           ],
         ),
       ),
