@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:project_gobarber/app/modules/login/widgets/my_logo.dart';
+import 'package:project_gobarber/app/widgets/my_logo.dart';
 import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {
