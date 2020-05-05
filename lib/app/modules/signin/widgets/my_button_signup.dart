@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:project_gobarber/app/modules/login/login_controller.dart';
+import 'package:project_gobarber/app/modules/signin/signin_controller.dart';
 
-class MyButtonSignin extends StatefulWidget {
+class MyButtonSignup extends StatefulWidget {
   @override
-  _MyButtonSigninState createState() => _MyButtonSigninState();
+  _MyButtonSignupState createState() => _MyButtonSignupState();
 }
 
-class _MyButtonSigninState extends State<MyButtonSignin> {
-  LoginController controller = Modular.get<LoginController>();
+class _MyButtonSignupState extends State<MyButtonSignup> {
+  SigninController controller = Modular.get<SigninController>();
 
   @override
   Widget build(BuildContext context) {
@@ -36,22 +36,22 @@ class _MyButtonSigninState extends State<MyButtonSignin> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Icon(
-                Icons.arrow_forward,
-                color: Color.fromARGB(255, 255, 144, 0),
+                Icons.arrow_back,
+                color: Colors.white,
               ),
               SizedBox(
                 width: 10,
               ),
               Text(
-                'Criar uma conta',
+                'Voltar para logon',
                 style: TextStyle(
                   fontSize: 15,
-                  color: Color.fromARGB(255, 255, 144, 0),
+                  color: Colors.white,
                 ),
               ),
             ],
           ),
-          onPressed: controller.onTapSignIn,
+          onPressed: controller.onTapSignUp,
         ),
       ),
     );

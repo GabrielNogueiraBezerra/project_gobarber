@@ -1,13 +1,14 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 
-part 'home_controller.g.dart';
+part 'signin_controller.g.dart';
 
-class HomeController = _HomeControllerBase with _$HomeController;
+class SigninController = _SigninControllerBase with _$SigninController;
 
-abstract class _HomeControllerBase with Store {
+abstract class _SigninControllerBase with Store {
+  
   @action
-  Future onTapImage() async {
+  Future onTapSignUp() async{
     Future.delayed(Duration(seconds: 1)).then((v) {
       Modular.to.pushReplacementNamed('/login/');
     });

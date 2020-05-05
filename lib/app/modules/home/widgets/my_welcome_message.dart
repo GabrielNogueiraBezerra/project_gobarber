@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:project_gobarber/app/modules/home/home_controller.dart';
 
-class MyWelcomeMessage extends StatelessWidget {
+class MyWelcomeMessage extends StatefulWidget {
+
+  @override
+  _MyWelcomeMessageState createState() => _MyWelcomeMessageState();
+}
+
+class _MyWelcomeMessageState extends State<MyWelcomeMessage> {
+  HomeController controller = Modular.get<HomeController>();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,14 +47,17 @@ class MyWelcomeMessage extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              height: 60,
-              width: 60,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://http2.mlstatic.com/foto-desenho-para-o-seu-perfil-das-redes-sociais-D_NQ_NP_614041-MLB27185740295_042018-O.jpg',
+            GestureDetector(
+              onTap: controller.onTapImage,
+              child: Container(
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      'https://http2.mlstatic.com/foto-desenho-para-o-seu-perfil-das-redes-sociais-D_NQ_NP_614041-MLB27185740295_042018-O.jpg',
+                    ),
                   ),
                 ),
               ),

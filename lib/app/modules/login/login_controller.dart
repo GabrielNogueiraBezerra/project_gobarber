@@ -15,8 +15,15 @@ abstract class _LoginControllerBase with Store {
   @action
   Future onTapLogin() async {
     this._login = true;
-    Future.delayed(Duration(seconds: 4)).then((v) {
+    Future.delayed(Duration(seconds: 1)).then((v) {
       Modular.to.pushReplacementNamed('/home/');
+    });
+  }
+
+  @action
+  Future onTapSignIn() async{
+    Future.delayed(Duration(seconds: 1)).then((v) {
+      Modular.to.pushReplacementNamed('/signin/');
     });
   }
 

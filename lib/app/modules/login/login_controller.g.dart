@@ -39,6 +39,13 @@ mixin _$LoginController on _LoginControllerBase, Store {
     return _$onTapLoginAsyncAction.run(() => super.onTapLogin());
   }
 
+  final _$onTapSignInAsyncAction = AsyncAction('onTapSignIn');
+
+  @override
+  Future<dynamic> onTapSignIn() {
+    return _$onTapSignInAsyncAction.run(() => super.onTapSignIn());
+  }
+
   @override
   String toString() {
     final string = 'login: ${login.toString()}';
